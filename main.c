@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jankruchina <jankruchina@student.42.fr>    +#+  +:+       +#+        */
+/*   By: jakruchi <jakruchi@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 12:41:38 by jankruchina       #+#    #+#             */
-/*   Updated: 2024/12/13 19:05:00 by jankruchina      ###   ########.fr       */
+/*   Updated: 2024/12/14 00:01:46 by jakruchi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,8 +104,26 @@ int main(void)
     printf("\n------------test-14------------\n");
     // count = printf(NULL);
     // printf("printf printed: %d characters\n", count);
-    count = ft_printf(NULL);
+    // count = ft_printf(NULL);
+    // printf("ft_printf printed: %d characters\n", count);
+
+	int	zero = 0;
+	printf("\n------------test-15------------\n");
+    count = printf("%d %i %u %x %X\n", zero, zero, zero, zero, zero);
+    printf("printf printed: %d characters\n", count);
+	count = ft_printf("%d %i %u %x %X\n", zero, zero, zero, zero, zero);
     printf("ft_printf printed: %d characters\n", count);
 
+	printf("\n------------test-16------------\n");
+    count = printf("%d %i %u %x %X\n", INT_MAX, INT_MAX, UINT_MAX, UINT_MAX, UINT_MAX);
+    printf("printf printed: %d characters\n", count);
+	count = ft_printf("%d %i %u %x %X\n", INT_MAX, INT_MAX, UINT_MAX, UINT_MAX, UINT_MAX);
+    printf("ft_printf printed: %d characters\n", count);
+
+	printf("\n------------test-17------------\n");
+    count = printf("%d %i %u %x %X\n", INT_MIN, INT_MIN, -12340, -12340, -12340);
+    printf("printf printed: %d characters\n", count);
+	count = ft_printf("%d %i %u %x %X\n", INT_MIN, INT_MIN, -12340, -12340, -12340);
+    printf("ft_printf printed: %d characters\n", count);
     return (0);
 }
