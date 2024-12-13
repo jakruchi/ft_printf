@@ -1,31 +1,29 @@
 NAME = libftprintf.a
+
+# compiler and flags
 CC = cc
 CFLAGS = -Wall -Werror -Wextra
-SRCS = ft_printf.c
-OBJS = $(SRCS:.c=.o)      # Object files corresponding to .c files
 
+# source files and objects
+SRCS = ft_printf.c ft_printf_utils.c
+OBJS = $(SRCS:.c=.o)
 
-# Rule to create the static library
+# rules
+all: $(NAME)
+
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
-# Rule to compile .c files into .o files
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-# Default target to build the library
-all: $(NAME)
-
-# Clean up object files
 clean:
 	rm -f $(OBJS)
 
-# Clean up object files and the static library
 fclean: clean
 	rm -f $(NAME)
 
-# Rebuild everything from scratch
 re: fclean all
 
-# Phony targets
+# phony targets
 .PHONY: all clean fclean re
