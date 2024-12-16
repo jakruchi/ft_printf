@@ -6,9 +6,11 @@
 /*   By: jakruchi <jakruchi@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 12:41:38 by jankruchina       #+#    #+#             */
-/*   Updated: 2024/12/14 00:01:46 by jakruchi         ###   ########.fr       */
+/*   Updated: 2024/12/16 21:20:35 by jakruchi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+// make && cc -Wall -Werror -Wextra main.c -L. libftprintf.a
 
 #include "ft_printf.h"
 
